@@ -4,11 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather_Application</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    This is the packet tracer app
     <h1 class="display"></h1>
+
+    <div class="weather-container">
+        <h1 class="app-title">Weather App</h1>
+        <div class="search-box">
+            <input type="text" id="cityInput" placeholder="Enter city name..." />
+            <button id="searchBtn" onclick="checkWeather()">Search</button>
+        </div>
+
+        <div class="weather-info">
+            <h2 id="cityName">City Name</h2>
+            <p id="temperature">-- °C</p>
+            <p id="wind-speed">-- km/hr</p>
+        </div>
+
     <script src="index.js"></script>
 </body>
 </html>
+
+<!-- novotel,
+jwmarriot, -->

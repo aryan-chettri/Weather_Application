@@ -1,0 +1,150 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #fff;
+}
+
+.weather-container {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.weather-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.app-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+#cityInput {
+    padding: 12px 15px;
+    border: none;
+    border-radius: 30px 0 0 30px;
+    width: 70%;
+    font-size: 1rem;
+    outline: none;
+    background: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+}
+
+#cityInput:focus {
+    background: rgba(255, 255, 255, 0.95);
+    transform: scale(1.02);
+}
+
+#searchBtn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 0 30px 30px 0;
+    background: #4a00e0;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#searchBtn:hover {
+    background: #8e2de2;
+    transform: scale(1.05);
+}
+
+.weather-info {
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+#cityName {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+#temperature {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 10px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#wind-speed, #description {
+    font-size: 1.2rem;
+    margin: 5px 0;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .weather-container {
+        padding: 20px;
+    }
+
+    .app-title {
+        font-size: 1.5rem;
+    }
+
+    #cityInput {
+        width: 65%;
+        padding: 10px 12px;
+    }
+
+    #searchBtn {
+        padding: 10px 15px;
+    }
+
+    #cityName {
+        font-size: 1.5rem;
+    }
+
+    #temperature {
+        font-size: 2.5rem;
+    }
+
+    #wind-speed, #description {
+        font-size: 1rem;
+    }
+}
+
+/* Weather Icons (Optional - Add if you include icons later) */
+.weather-icon {
+    width: 80px;
+    height: 80px;
+    margin: 10px auto;
+    display: block;
+}
